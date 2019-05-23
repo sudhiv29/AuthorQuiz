@@ -8,7 +8,7 @@ import './bootstrap.min.css'
 function Hero () {
   return (
     <div className='row'>
-      <div className='jumbotron col-10 offset-1'>
+      <div className='jumbotron col-10 offset-1 heading-author'>
         <h1>Author Quiz</h1>
         <p>Select the book written by the author shown</p>
       </div>
@@ -33,8 +33,8 @@ function Turn ({ author, books, highlight, onAnswerSelected }) {
   function highlightToBgColor (highlight) {
     const mapping = {
       none: '',
-      correct: 'green',
-      wrong: 'red'
+      correct: 'gray',
+      wrong: 'brown'
     }
     return mapping[highlight]
   }
